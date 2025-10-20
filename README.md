@@ -99,3 +99,10 @@ The successful exploitation of this vulnerability allows an attacker to gain ful
 
 ### References
 - https://github.com/statamic/cms/pull/9256/commits/d9f1e916556e749a03fba6163de6cd67c3830ffd
+
+---
+
+**PoC video:**
+
+[![Watch the PoC on YouTube](https://img.youtube.com/vi/qx8axpmTz1E/maxresdefault.jpg)](https://www.youtube.com/watch?v=qx8axpmTz1E)
+
