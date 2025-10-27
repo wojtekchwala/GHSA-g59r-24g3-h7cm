@@ -1,5 +1,5 @@
 # GHSA-g59r-24g3-h7cm
-Statamic Privilege Escalation PoC
+Privilege Escalation in Statamic CMS - Superadmin Account Takeover PoC
 
 > [!IMPORTANT]
 > **Responsible Disclosure Notice**  
