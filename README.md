@@ -12,7 +12,9 @@ Privilege Escalation in Statamic CMS - Superadmin Account Takeover PoC
 
 
 ### Summary
-There is a critical vulnerability in the Laravel-based content management system (CMS) Statamic that can be exploited to take over a Superadmin account. This issue comes from a combination of stored Cross-Site Scripting (XSS) vulnerabilities, which remain exploitable even in the latest version of the CMS. These vulnerabilities allow attackers to run malicious JavaScript in the victim's browser. A low-privileged user can inject harmful content into the CMS, setting a trap for the Superadmin. When the Superadmin accesses this content, the exploit runs in their session, enabling the attacker to gain higher privileges and potentially take over the system.
+There is a critical privilege escalation vulnerability in the Laravel-based content management system **Statamic CMS** that can be exploited to take over a Superadmin account. This issue comes from a combination of stored Cross-Site Scripting (XSS) vulnerabilities, which remain exploitable up to version `5.22.0` and are patched in version `5.22.1`. 
+
+These vulnerabilities allow attackers to run malicious JavaScript in the victim's browser. A low-privileged user can inject harmful content into the **Statamic CMS**, setting a trap for the Superadmin. When the Superadmin accesses this content, the exploit runs in their session, enabling the attacker to gain higher privileges and potentially take over the system.
 
 This problem is also related to the lack of proper server-side validation of the X-CSRF-TOKEN used in PATCH requests, which makes it easier for the attacker to change important account details like the Superadmin's password or email address.
 
