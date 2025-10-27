@@ -71,8 +71,9 @@ At the time of reporting the Multiple Stored Cross-Site Scripting vulnerability,
 For further details on the changes made, including the use of `v-pre`, please refer to the Reference section at the bottom of this Security Advisory. There is a link to a commit that shows the differences between certain versions of the affected file, highlighting the partial mitigation that was applied.
 
 ### PoC
-#### Scenario 1: Superadmin Password Change (Version ≤ 5.21.0)
-In versions prior to the latest update, the CMS's password change mechanism did not require the current password. This allows an attacker to execute a stored XSS payload that automatically changes the Superadmin's password. The attack can be triggered by the Superadmin merely visiting a compromised Collection or Taxonomy or clicking on a malicious link.
+#### Scenario 1: Superadmin Password Change (Version == 5.21.0)
+> [!IMPORTANT] 
+> In the `5.21.0` version, the CMS's password change mechanism did not require the current password. This allows an attacker to execute a stored XSS payload that automatically changes the Superadmin's password. The attack can be triggered by the Superadmin merely visiting a compromised Collection or Taxonomy or clicking on a malicious link.
 
 **Exploit:**
 
@@ -81,7 +82,8 @@ In versions prior to the latest update, the CMS's password change mechanism did 
 ```
 
 #### Scenario 2: Superadmin Email Address Change (Version ≤ 5.21.0)
-In the latest version (5.22.0), the password change mechanism was hardened by requiring the current password. However, the stored XSS vulnerability still allows an attacker to change the email address associated with the Superadmin account. By altering the email address, the attacker can initiate a password reset process, gaining control over the account.
+> [!IMPORTANT] 
+> In the latest version (5.22.0), the password change mechanism was hardened by requiring the current password. However, the stored XSS vulnerability still allows an attacker to change the email address associated with the Superadmin account. By altering the email address, the attacker can initiate a password reset process, gaining control over the account.
 
 **Exploit:**
 
@@ -92,7 +94,7 @@ In the latest version (5.22.0), the password change mechanism was hardened by re
 ### Impact
 The successful exploitation of this vulnerability allows an attacker to gain full control over the Superadmin account, leading to:
 
-- Complete administrative access to the CMS.
+- Complete administrative access to the Statamic CMS.
 - Potential for lateral movement within the application.
 - Significant risk of data leakage, modification, or deletion.
 - Undermining the integrity and confidentiality of the entire Statamic CMS ecosystem.
