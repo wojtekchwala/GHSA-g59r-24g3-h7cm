@@ -8,6 +8,7 @@ Privilege Escalation in Statamic CMS - Superadmin Account Takeover PoC
 >  
 > The CVE has already been assigned - **CVE-2025-64112**.
 
+https://github.com/statamic/cms/security/advisories/GHSA-g59r-24g3-h7cm
 
 ### Summary
 There is a critical privilege escalation vulnerability in the Laravel-based content management system **Statamic CMS** that can be exploited to take over a Superadmin account. This issue comes from a combination of stored Cross-Site Scripting (XSS) vulnerabilities, which remain exploitable up to version `5.22.0` and are patched in version `5.22.1`. 
