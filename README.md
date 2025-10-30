@@ -5,10 +5,8 @@ Privilege Escalation in Statamic CMS - Superadmin Account Takeover PoC
 > **Responsible Disclosure Notice**  
 > This vulnerability was reported to the vendor/maintainer ([Statamic](https://github.com/statamic)) following a responsible disclosure process.  
 > The maintainer was given more than **90 days** to acknowledge the security advisory and provide a fix, in line with industry-standard disclosure policies.  
-> Despite multiple attempts to establish communication, there was **no cooperation, no response, and a clear lack of good will from the maintainer** to address the issue.
 >  
-> The **CVE has not yet been assigned solely due to the unresponsiveness of the maintainer**, not due to a lack of technical validity or impact.  
-> The CVE request is currently in progress and will be finalized through public disclosure channels.
+> The CVE has already been assigned - **CVE-2025-64112**.
 
 
 ### Summary
